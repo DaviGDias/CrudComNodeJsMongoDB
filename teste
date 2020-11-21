@@ -1,0 +1,23 @@
+const readFile = () => {
+    const content = fs.readFileSync(`/itens.js`, `utf-8`);
+    return (JSON.parse(content));
+}
+const writeFile = (content) => {
+    const updateFile = JSON.stringify(content);
+    fs.writeFileSync('/itens.json', updateFile, 'utf-8');
+}
+
+router.get('/', (req, res)=> {
+    const content = readFile()
+    res.send(content);
+})
+
+router.post('/', function(req, res){
+    const currentContent = readFile();
+    const {nome, sobrenome, dataNascimento, cep, telefone} = req.body;
+    currentContent.push({nome, sobrenome, dataNascimento, cep, telefone});
+    writeFile(currentContent);
+    res.send(currentContent);
+})
+
+app.use(router);

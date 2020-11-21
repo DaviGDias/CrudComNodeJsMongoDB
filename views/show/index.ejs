@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista</title>
+</head>
+
+<body>
+    <h2>Lista de</h2>
+   
+    <table border="1">
+        <thead>
+            <td>
+                Nome
+            </td>
+            <td>
+                Sobrenome
+            </td>
+        </thead>
+        <tbody>
+            <%data.forEach( function(details) { %>
+                <tr>
+                    <td><%=data.nome%></td>
+                    <td><%=data.sobrenome%></td> 
+                </tr>
+
+            <% })%> 
+        </tbody>
+        <button><a href="index.ejs"></a>Voltar</button>
+    </table>
+</body>
+
+</html>
