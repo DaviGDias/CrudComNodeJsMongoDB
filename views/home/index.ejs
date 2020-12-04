@@ -10,9 +10,10 @@
 </head>
 
 <body>
-    <h2>Cadastro</h2>
+    <br>
     <div class="container">
-        <form action="/show" method="post">
+        <h2>Cadastro</h2>
+        <form action="/show" method="post"> <!-- Direciona para a pagina de listegem Show-->
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="inputNome">Nome</label>
@@ -25,7 +26,7 @@
                 </div>
                 <div class="form-group col-md-12">
                     <label for="inputEndereco">Endereço</label>
-                    <input type="text" class="form-control" name="endereco" placeholder="Rua, Taquara N° 1234">
+                    <input type="text" class="form-control" name="endereco" placeholder="Rua, Tal N° 1234">
                 </div>
                 <div class="form-group col-md-6">
                     <label for="inpuDataNascimento">Data de nascimento</label>
@@ -35,21 +36,21 @@
                     <label for="inputTelefone">Telefone</label>
                     <input type="text" class="form-control" name="telefone" id="">
                 </div>
-                <div class="form-row">
-                    <div class="col-7">
+              
+                    <div class="form-group col-md-7">
                         <label for="inputCidade">Cidade</label>
                         <input type="text" class="form-control" name="cidade" placeholder="Cidade">
                     </div>
-                    <div class="col">
+                    <div class="form-group col-md-2">
                         <label for="inputEstado">Estado</label>
                         <input type="text" class="form-control" name="estado" placeholder="Estado">
                     </div>
-                    <div class="col">
+                    <div class="form-group col-md-3">
                         <label for="inputCep">Cep</label>
                         <input type="text" class="form-control" name="cep" placeholder="CEP">
                     </div>
-                </div>
-              
+                
+              <br>
                 <button class="btn btn-primary" type="submit" style="margin-top: 15px;">Cadastrar</button>
         </form>
     </div>
