@@ -4,8 +4,7 @@ const app = express() // cria a variavel app para utilizar o express
 const bodyparser = require('body-parser')
 const objectID = require('mongodb').ObjectID // Importa um modulo do mongodb
 const MongoClient = require('mongodb').MongoClient // Importa um modulo cliente do MongoDB
-const conexaoMongodb = "mongodb+srv://w0ng:TW1C9EyguFIlzHcB@cluster0.icspx.mongodb.net/crud?retryWrites=true&w=majority" //String de conexão do mongodb
-//const fs = require('fs');
+const conexaoMongodb = "UTILEZE SUA STRING DE CONEXÃO" //String de conexão do mongodb
 const { ObjectId } = require('mongodb');
 
 app.use(express.json({ extended: true }))
@@ -26,14 +25,6 @@ app.use(bodyparser.json())
 
 app.set('view engine', 'ejs')
 
-/*const readFile = () => {
-    const content = fs.readFileSync(`itens.json`, `utf-8`);
-    return (JSON.parse(content));
-}
-const writeFile = (content) => {
-    const updateFile = JSON.stringify(content);
-    fs.writeFileSync('itens.json', updateFile, 'utf-8');
-}*/
 // Rota de leitura dos dados
 app.get('/', function (req, res) {
     res.render('home')
